@@ -31,6 +31,9 @@ header {
 header > div {
   margin: 40px;
 }
+header > div > h1 {
+  font-size: 25px;
+}
 header > div > ul {
   display: flex;
 }
@@ -104,4 +107,22 @@ section > div > button:hover {
   transition: 0.3s;
   border-radius: 30px;
   font-size: 19px;
+}
+@media only screen and (max-width: 450px) {
+  section {
+    width: 80%;
+  }
+  header {
+    height: 80px;
+    width: 100vw;
+  }
+  header > div {
+    margin: 20px;
+  }
+  #menu {
+    display: none;
+  }
+  main {
+    width: 100vw;
+  }
 }
