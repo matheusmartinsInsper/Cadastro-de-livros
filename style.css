@@ -31,6 +31,9 @@ header {
 header > div {
   margin: 40px;
 }
+header > div > i {
+  display: none;
+}
 header > div > h1 {
   font-size: 25px;
 }
@@ -117,12 +120,17 @@ section > div > button:hover {
     width: 100vw;
   }
   header > div {
-    margin: 20px;
+    margin: 25px;
   }
   #menu {
     display: none;
   }
   main {
     width: 100vw;
+  }
+  header > div > i {
+    display: block;
+    color: white;
+    font-size: 35px;
   }
 }
