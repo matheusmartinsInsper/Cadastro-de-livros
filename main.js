@@ -40,6 +40,7 @@ function salvarLivros(element) {
   document.getElementById("ano").value = "";
   document.getElementById("categoria").value = "";
   document.getElementById("preco").value = "";
+  livroCadastrado();
 }
 
 function validarLivro(Livro) {
@@ -74,3 +75,13 @@ let makeId = () => {
 //   }, 0);
 //   return number;
 // };
+let livroCadastrado = function () {
+  window.document.getElementById("form").style.display = "none";
+  window.document.getElementById("adicionar").style.display = "block";
+  window.document.getElementById("titulo").style.color = "#eaeaea";
+};
+let adicionarLivro = function () {
+  window.document.getElementById("adicionar").style.display = "none";
+  window.document.getElementById("form").style.display = "flex";
+  window.document.getElementById("titulo").style.color = "#3c4048";
+};

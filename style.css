@@ -66,6 +66,7 @@ section {
   height: 55%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #eaeaea;
   border-radius: 15px;
   padding: 20px 0px 20px 0px;
@@ -76,11 +77,12 @@ section > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 70%;
 }
 section > div > span {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   margin-top: 15px;
 }
 section > div > span > input {
@@ -102,14 +104,40 @@ section > div > button {
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
+  color: #eaeaea;
 }
 section > div > button:hover {
   color: #eaeaea;
   height: 42px;
   width: 42%;
   transition: 0.3s;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 19px;
+}
+#adicionar {
+  width: 75%;
+  height: 330px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  margin-top: 20px;
+  background-color: #3c4048;
+  border-radius: 20px;
+  display: none;
+}
+#buttonAdicionar {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#adicionar > h2 {
+  margin-top: -80px;
+  color: #eaeaea;
+}
+main > section > div > img {
+  width: 300px;
+  margin-top: -60px;
 }
 @media only screen and (max-width: 450px) {
   section {

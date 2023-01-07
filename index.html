@@ -32,7 +32,7 @@
     </header>
     <main>
       <section>
-        <div><h2>Cadastro</h2></div>
+        <div><h2 id="titulo">Cadastro</h2></div>
         <div id="form">
           <span>
             <label for="">Digite o nome do Livro</label>
@@ -40,7 +40,7 @@
           </span>
           <span>
             <label for="">Digite o ano do Livro</label>
-            <input type="text" placeholder="1989" id="ano" />
+            <input type="number" placeholder="1989" id="ano" />
           </span>
           <span>
             <label for="">Categoria do Livro</label>
@@ -48,10 +48,18 @@
           </span>
           <span>
             <label for="">Preço do Livro</label>
-            <input type="text" placeholder="234,50R$" id="preco" />
+            <input type="number" placeholder="234,50R$" id="preco" />
           </span>
 
           <button onclick="Cadastrar()">Cadastrar</button>
+        </div>
+        <div id="adicionar">
+          <img src="gummyProgramming.svg" alt="" />
+          <h2>Livro adicionado com sucesso</h2>
+          <br />
+          <button id="buttonAdicionar" onclick="adicionarLivro()">
+            Adicionar
+          </button>
         </div>
       </section>
     </main>
