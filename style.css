@@ -130,14 +130,21 @@ section > div > button:hover {
 #buttonAdicionar {
   margin-top: 0px;
   margin-bottom: 0px;
+  border-radius: 8px;
+  width: 50%;
 }
 #adicionar > h2 {
   margin-top: -80px;
   color: #eaeaea;
 }
+#adicionar > h2 > i {
+  margin-left: 8px;
+  color: aquamarine;
+}
 main > section > div > img {
   width: 300px;
   margin-top: -60px;
+  margin-right: 3px;
 }
 @media only screen and (max-width: 450px) {
   section {
@@ -160,5 +167,13 @@ main > section > div > img {
     display: block;
     color: white;
     font-size: 35px;
+  }
+  main > section > div > img {
+    width: 270px;
+    margin-top: -60px;
+    margin-left: -20px;
+  }
+  #adicionar {
+    height: 300px;
   }
 }
