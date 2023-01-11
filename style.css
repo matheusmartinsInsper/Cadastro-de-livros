@@ -45,8 +45,16 @@ header > div > ul > li {
   list-style: none;
   transition: 0.5s;
   border-bottom: 2px solid #3c4048;
+  color: whitesmoke;
+  text-decoration: none;
 }
-header > div > ul > li:hover {
+header > div > ul > li > a {
+  color: whitesmoke;
+  text-decoration: none;
+  border-bottom: 2px solid #3c4048;
+  transition: 0.5s;
+}
+header > div > ul > li > a:hover {
   color: #fb2576;
   transition: 0.5s;
   cursor: pointer;
@@ -56,14 +64,14 @@ header > div > ul > li:hover {
 main {
   width: 100%;
   height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 40% auto;
 }
 
 section {
-  width: 36%;
-  height: 55%;
+  margin: auto;
+  width: 90%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,6 +79,7 @@ section {
   border-radius: 15px;
   padding: 20px 0px 20px 0px;
   min-height: 430px;
+  /* box-shadow: inset -6px -6px 12px #83878f, inset 10px 10px 10px #d9dbe0;*/
 }
 section > div {
   display: flex;
@@ -97,8 +106,8 @@ section > div > button {
   margin-top: 30px;
   margin-bottom: 20px;
   height: 40px;
-  width: 40%;
-  border-radius: 15px;
+  width: 50%;
+  border-radius: 10px;
   border: none;
   background-color: #fb2576;
   font-size: 18px;
@@ -109,7 +118,7 @@ section > div > button {
 section > div > button:hover {
   color: #eaeaea;
   height: 42px;
-  width: 42%;
+  width: 52%;
   transition: 0.3s;
   border-radius: 10px;
   font-size: 19px;
@@ -145,6 +154,60 @@ main > section > div > img {
   width: 300px;
   margin-top: -60px;
   margin-right: 3px;
+}
+.cardizinho {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  color: #313338;
+  background-color: #f3ececdc;
+  border-radius: 15px;
+  box-shadow: 8px 6px 22px #8f9196, -2px -2px 15px #edeff3;
+}
+#livrosAdicionados {
+  padding: 25px 15px;
+  display: grid;
+  grid-template-columns: 33% 33% auto;
+  grid-template-rows: 33.3% 33.3% auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  box-sizing: border-box;
+  height: 90%;
+}
+.cardizinho > h3:hover {
+  background-color: #b6b3b3;
+  color: whitesmoke;
+  cursor: context-menu;
+  padding: 2px 4px 2px 6px;
+  width: 95%;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.cardizinho > div {
+  height: 1px;
+  position: relative;
+  top: 5px;
+  left: 160px;
+  width: 10%;
+}
+.cardizinho > div > span > i {
+  font-size: 23px;
+  color: #ec0d63;
+}
+.cardizinho > div > span > i:hover {
+  font-size: 23px;
+  color: #fc1970;
+  cursor: pointer;
+  transition: 0.2s;
 }
 @media only screen and (max-width: 450px) {
   section {

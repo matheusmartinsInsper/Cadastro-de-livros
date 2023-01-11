@@ -41,6 +41,7 @@ function salvarLivros(element) {
   document.getElementById("categoria").value = "";
   document.getElementById("preco").value = "";
   livroCadastrado();
+  renderizarLivros();
 }
 
 function validarLivro(Livro) {
@@ -61,7 +62,7 @@ function validarLivro(Livro) {
 }
 
 let makeId = () => {
-  let number = Math.round(Math.random().toFixed(7) * 10000000);
+  let number = Math.round(Math.random().toFixed(7) * 1000000);
   return number;
 };
 // let repeticaoLivros = (array, value) => {
@@ -85,3 +86,23 @@ let adicionarLivro = function () {
   window.document.getElementById("form").style.display = "flex";
   window.document.getElementById("titulo").style.color = "#3c4048";
 };
+function renderizarLivros() {
+  let containerDeLivros = document.getElementById("livrosAdicionados");
+
+  if (Livros[0] == "") {
+    containerDeLivros.innerHTML = "<h2>texto</h2>";
+  } else {
+    let livrosSalvos = Livros.map(
+      (element) => `<div class='cardizinho'>
+      <div><span><i class="fa-solid fa-trash"></i></span></div>
+      <h3>Livro: ${element.Nome}</h3>
+      <h3>Ano: ${element.Ano}</h3>
+      <h3>Categoria: ${element.Categoria}</h3>
+      <h3>Preço: ${element.Preco}</h3>
+      <h3>ID: ${element.id}</h3>
+      
+      </div>`
+    ).join("");
+    containerDeLivros.innerHTML = livrosSalvos;
+  }
+}
