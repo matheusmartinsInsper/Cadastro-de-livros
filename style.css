@@ -71,7 +71,7 @@ main {
 section {
   margin: auto;
   width: 90%;
-  height: 70%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,7 +161,7 @@ main > section > div > img {
   padding-left: 10px;
   padding-right: 10px;
   width: 90%;
-  height: 90%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -180,7 +180,8 @@ main > section > div > img {
   column-gap: 10px;
   row-gap: 10px;
   box-sizing: border-box;
-  height: 90%;
+  height: 98%;
+  width: 98%;
 }
 .cardizinho > h3:hover {
   background-color: #b6b3b3;
@@ -195,9 +196,12 @@ main > section > div > img {
 .cardizinho > div {
   height: 1px;
   position: relative;
-  top: 5px;
-  left: 160px;
-  width: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.cardizinho > div > span {
+  height: 23px;
 }
 .cardizinho > div > span > i {
   font-size: 23px;
@@ -211,7 +215,8 @@ main > section > div > img {
 }
 @media only screen and (max-width: 450px) {
   section {
-    width: 80%;
+    width: 95%;
+    margin-top: 10px;
   }
   header {
     height: 80px;
@@ -224,7 +229,24 @@ main > section > div > img {
     display: none;
   }
   main {
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 75rem;
+  }
+  #livrosAdicionados {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin-top: 20px;
+    padding-top: 10px;
+    height: 100%;
+    column-gap: 0px;
+    height: 1000px;
+  }
+  .cardizinho {
+    padding: 5px;
+    height: 100%;
+    max-height: 155px;
   }
   header > div > i {
     display: block;

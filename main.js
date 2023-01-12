@@ -94,10 +94,10 @@ function renderizarLivros() {
   } else {
     let livrosSalvos = Livros.map(
       (element) => `<div class='cardizinho'>
-      <div><span><i class="fa-solid fa-trash"></i></span></div>
+      <div><span onclick='removerLivro(${element.id})'><i class="fa-solid fa-trash"></i></span></div>
       <h3>Livro: ${element.Nome}</h3>
       <h3>Ano: ${element.Ano}</h3>
-      <h3>Categoria: ${element.Categoria}</h3>
+      <h3>Categ: ${element.Categoria}</h3>
       <h3>Preço: ${element.Preco}</h3>
       <h3>ID: ${element.id}</h3>
       
@@ -105,4 +105,11 @@ function renderizarLivros() {
     ).join("");
     containerDeLivros.innerHTML = livrosSalvos;
   }
+}
+function removerLivro(idDoLivro) {
+  let newLivros = [];
+  newLivros = Livros.filter((element) => element.id != idDoLivro);
+  Livros = newLivros.map((element) => element);
+  renderizarLivros();
+  console.log(Livros);
 }
